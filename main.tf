@@ -93,7 +93,7 @@ resource "aws_db_instance" "default" {
 
   lifecycle {
     ignore_changes = [
-      snapshot_identifier, # if created from a snapshot, will be non-null at creation, but null afterwards
+      snapshot_identifier, engine_version # if created from a snapshot, will be non-null at creation, but null afterwards
     ]
   }
 
